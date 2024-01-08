@@ -8,6 +8,7 @@ console.log(konversiMenit(120)); // 2:00
 function konversiMenit(menit) {
     // you can only write your code here!
     let time = Math.floor(menit/60);
+    // return time;
     let reTime = menit % 60 < 10 ? '0' + menit % 60 : menit % 60;
-    return '${time}:${reTime}';
+    return `${time}:${reTime}`;
   }

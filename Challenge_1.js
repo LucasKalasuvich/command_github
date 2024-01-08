@@ -16,4 +16,4 @@ function bandingkanAngka(angka1, angka2) {
             return -1;
         }
     // }
-  }
+}
