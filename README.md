@@ -14,7 +14,7 @@ B. Macam-macam dari Repository dan Version Control dibagi menjadi 2 macam katego
 
 - Decentralized atau Distributed source control adalah: Source control dimana repositorynya menyimpan version dari project di dalam Local Repository dan Remote Repository.
 
-//===========================================================================================================
+===========================================================================================================
 
 C. Bash Command
 
