@@ -15,6 +15,7 @@ B. Macam-macam dari Repository dan Version Control dibagi menjadi 2 macam katego
 - Decentralized atau Distributed source control adalah: Source control dimana repositorynya menyimpan version dari project di dalam Local Repository dan Remote Repository.
 
 //===========================================================================================================
+
 C. Bash Command
 
 //Untuk menunjukan dan mem-print working directory di posisi saat ini:
@@ -143,3 +144,62 @@ $notepad++ ~/.gitconfig
 menghalangi applikasi seperti gitkraken atau sourcetree untuk mengakses git
 anda: (Warning: tanyakan dahulu pihak compliance sebelum menggunakan ini)
 git config --global --add safe.directory '*'
+
+//Untuk menambahkan branch baru, gunakan command:
+(Note: concept branch baru bisa diterapkan setelah initial commit atau root
+commit, karena yang di branch sebenarnya adalah repository, baik local maupun
+remote)
+$git branch newBranch
+
+//Untuk melihat seluruh branch yang ada sekarang, baik yang berada di dalam local
+repository maupun yang berada di dalam remote repository:
+$git branch -a
+$git branch --all
+
+//Untuk melihat seluruh branch yang hanya ada di dalam local repository:
+$git branch -l
+$git branch --list
+
+//untuk melihat seluruh branch yang hanya berada di dalam remote repository:
+$git branch -r
+$git branch --remotes
+
+//Untuk switch dan pindah ke branch lain, gunakan command.
+$git checkout destinationBranch
+
+//Untuk switch dan pindah ke branch lain, sekaligus membuat branch barunya:
+$git checkout -b newBranch
+Cara me-rename local branch bersamaan dengan history reference log dan
+configurationnya:
+$git branch -m oldBranchName newBranchName
+$git branch --move oldBranchName newBranchName
+
+//Untuk push seluruh branch yang ada ke remote repository:
+git push --all myRemoteRepo
+
+//Untuk menghapus satu local branch, gunakan command:
+(Note: jangan menghapus branch di saat anda saat ini berada di branch tersebut)
+$git branch -d branchName
+$git branch --delete branchName
+Branch bisa memiliki kondisi:
+1. Kosong, belum ada commit sama sekali
+2. Sudah memiliki jalur commit dan belum merge (merge akan diajarkan di
+section berikutnya)
+3. Sudah di merge ke branch utama dan menjadi history
+
+//Menghapus branch apabila belum dimerge (Kondisi nomor 2) akan mendapatkan
+warning, karena menghapus branch yang belum di gabung akan berakibat
+kehilangan seluruh branch dan datanya. Tapi apabila ingin force delete, gunakan
+capital D untuk menghapusnya:
+$git branch -D branchName
+(Note: Sekali lagi peringatan, melakukan ini akan kehilangan seluruh progress
+branch, dan pastikan ini memang yang diinginkan)
+
+//Untuk menghapus satu remote branch, gunakan command:
+$git push myRemoteRepo -d branchName
+$git push myRemoteRepo --delete branchName
+
+//Untuk melakukan perbandingan antara 2 branch, kita juga bisa menggunakan diff
+dan difftool:
+$git diff branch1 branch2
+$git difftool branch1 branch2
