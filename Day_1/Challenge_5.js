@@ -27,6 +27,7 @@ var input = [
   
 const dataHandling = (params) => {
     // write your code here
+    //console.log untuk mencetak pesan
   for(var i=0; i<params.length; i++){
     console.log("Nomor ID: " + params[i][0]);
     console.log("Nama Lengkap: " + params[i][1]);

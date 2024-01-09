@@ -10,8 +10,9 @@ function balikKata(kata) {
     var txt = kata;
     //splitTxt adalah string kosong yang menampung nilai baru
     var splitTxt = '';
+    //lakukan looping untuk pembalikan kata
     for (let i = kata.length - 1; i >= 0; i--) {
-      splitTxt = splitTxt + txt[i];
+      splitTxt = splitTxt + txt[i]; //setiap iterasi karakter dari txt pada indeks ke i ditambahkan ke splitTxt.
     }
     
     return splitTxt;

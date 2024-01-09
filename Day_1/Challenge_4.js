@@ -10,6 +10,7 @@ function xo(str) {
     var x=0;
     var o=0;
     for(let i=0; i<str.length; i++){
+        //pengembalian nilai true, jadi jika jumlah x sama o sama maka true
         if(str[i] == 'x'){
             x++;
         }else if(str[i] == 'o'){
